@@ -52,15 +52,29 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Menu Taskbar */
-#head .menu,
+#head .menu
+{
+    position: absolute;
+    width: 70%;
+    height: 91px;
+    padding-left: 300px;
+    top: 0;
+    right: 0;
+}
+
 #head .icon-thugon
 {
     position: absolute;
     width: 70%;
-    height: 100%;
-    padding-left: 300px;
+    height: 91px;
+    margin-left: 300px;
     top: 0;
     right: 0;
+}
+
+#head .icon-thugon
+{
+    display: none;
 }
 
 #head > .menu > .nav > li > a
@@ -95,8 +109,8 @@ font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     padding: 0;
     margin-top: -2px;
-    background-color: white;
-    box-shadow: 4px 5px 12px 1px #C7C7C7;
+    background-color: #FFFFFF;
+    /* box-shadow: 4px 5px 12px 1px #C7C7C7; */
     display: none;
     width: 11.5%;
 }
@@ -132,15 +146,68 @@ font-family: Arial, Helvetica, sans-serif;
 /* Tablet cho thanh menu */
 @media (min-width: 740px) and (max-width: 1023px) {
     /* Menu Taskbar */
-    #head .menu
+
+    #head .menu .nav
     {
-        position: absolute;
-        width: 70%;
-        height: 100%;
-        padding-left: 300px;
-        top: 0;
-        right: 0;
         display: none;
+        margin-left: 225px;
+        margin-top: 91px;
+        width: 300px;
+    }
+
+    #head .menu .nav
+    {
+        background-color: white;
+    }
+
+    #head > .menu > .nav > li
+    {
+        text-align: center;
+    }
+
+    /* #head .menu .nav li .subnav2
+    {
+        width: 120px;
+        box-shadow: 0px 7px 12px 5px #C7C7C7;;
+    } */
+
+    /* #head .menu .nav .subnav2
+    {
+        margin-left: 90px;
+    } */
+
+    #head .menu .nav .subnav2 li
+    {
+        width: 100px;
+        background-color: #FFFFFF;
+    }
+
+    #head .menu .nav .subnav2 li a
+    {
+        width: 100px;
+        background-color: #FFFFFF;
+        padding-right: 7px;
+    }
+
+    #head .icon-thugon
+    {
+        display: block;
+        margin-right: -730px;
+    }
+
+    #head .icon-thugon .icon
+    {
+        font-size: 40px;
+        margin-top: 15px;
+        margin-left: 5px;
+        padding: 10px;
+
+    }
+
+    #head .icon-thugon:hover
+    {
+        background-color: #C7C7C7;
+        display: inline-block;
     }
 }
 
@@ -469,13 +536,24 @@ font-family: Arial, Helvetica, sans-serif;
     width: 70%;
 }
 
-#content .bookshelf-containt .bookshelf-content .book-center .book
+#content > .bookshelf-containt > .bookshelf-content > .book-center > .book
 {
     width: 100%;
     display: flex;
     overflow: hidden;
 }
 
+/* #content .bookshelf-containt .bookshelf-content .book-center .book .book1 .book-content,
+#content .bookshelf-containt .bookshelf-content .book-center .book .book2 .book-content
+{
+    width: 200px;
+    height: 250px;
+    margin: 0 30px;
+    margin-top: 35px;
+    transition: 2s;
+} */
+
+#content .bookshelf-containt .bookshelf-content .book-center .book .book-content,
 #content .bookshelf-containt .bookshelf-content .book-center .book .book-content
 {
     width: 200px;
@@ -584,7 +662,7 @@ font-family: Arial, Helvetica, sans-serif;
     {
         width: 200px;
         height: 250px;
-        margin: 0 30px;
+        margin: 0 35px;
         margin-top: 35px;
         transition: 2s;
     }
