@@ -16,8 +16,8 @@
             </div>
 
             <!-- Thanh menu -->
-            <div class="menu">
-                <ul class="nav">
+            <div class="menu" >
+                <ul class="nav" id="thanh-menu">
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Danh mục</a></li>
                     <li><a href="#">Sự kiện</a></li>
@@ -25,15 +25,15 @@
                     <li><a href="#">Liên hệ</a></li>
                     <li>
                         <a href="#">Tài khoản</a>
-                        <ul class="subnav2">
+                        <!-- <ul class="subnav2">
                             <li><a href="dangky.html">Đăng ký</a></li>
                             <li><a href="dangnhap.html">Đăng nhập</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                 </ul>
             </div>
             <div class="icon-thugon">
-                <ion-icon name="reorder-four-outline"></ion-icon>
+                <ion-icon name="reorder-four-outline" class="icon" id="thanh-menu-res"></ion-icon>
             </div>
 
             <!-- Form tài khoản -->
@@ -68,7 +68,7 @@
         <div id="content">
             <!-- Video -->
             <div class="video">
-                <video src="/video/file.mp4" autoplay loop id="video-content"></video>
+                <video src="/video/file.mp4" autoplay preload="auto" loop id="video-content"></video>
             </div>
             <!-- Icon -->
             <div class="icon">
@@ -103,11 +103,21 @@
                     </div>
                     <div class="book-center">
                         <div class="book">
-                            <img src="./img/sach1.jpg" alt="" class="book-content">
-                            <img src="./img/sach2.jpg" alt="" class="book-content">
-                            <img src="./img/sach3.jpg" alt="" class="book-content">
-                            <img src="./img/sach4.jpg" alt="" class="book-content">
-                            <img src="./img/sach5.jpg" alt="" class="book-content">
+                            <!-- <div class="book1">
+                                <img src="./img/sach1.jpg" alt="" class="book-content">
+                                <img src="./img/sach2.jpg" alt="" class="book-content">
+                                <img src="./img/sach3.jpg" alt="" class="book-content">
+                            </div>
+                            <div class="book2">
+                                <img src="./img/sach4.jpg" alt="" class="book-content">
+                                <img src="./img/sach5.jpg" alt="" class="book-content">
+                            </div> -->
+
+                                <img src="./img/sach1.jpg" alt="" class="book-content" id="anh1">
+                                <img src="./img/sach2.jpg" alt="" class="book-content" id="anh2">
+                                <img src="./img/sach3.jpg" alt="" class="book-content" id="anh3">
+                                <img src="./img/sach4.jpg" alt="" class="book-content" id="anh4">
+                                <img src="./img/sach5.jpg" alt="" class="book-content" id="anh5">
                         </div>
                         <div class="giadosach">
                             <img src="./img/book_bg-removebg-preview.png" alt="" class="kesach">
