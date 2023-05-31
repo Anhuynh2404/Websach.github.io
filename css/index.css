@@ -8,15 +8,9 @@
 body
 {
     background: url('/img/Background.png') top center / cover no-repeat;
-    height: 1500px;
 }
 
-@media (min-width: 740px) and (max-width: 1023px) {
-    body
-    {
-        height: 1900px;
-    }
-}
+
 
 html
 {
@@ -32,7 +26,7 @@ font-family: Arial, Helvetica, sans-serif;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Logo Avatar */
@@ -146,13 +140,12 @@ font-family: Arial, Helvetica, sans-serif;
 /* Tablet cho thanh menu */
 @media (min-width: 740px) and (max-width: 1023px) {
     /* Menu Taskbar */
-
     #head .menu .nav
     {
         display: none;
-        margin-left: 225px;
+        margin-left: 326px;
         margin-top: 91px;
-        width: 300px;
+        width: 200px;
     }
 
     #head .menu .nav
@@ -162,7 +155,8 @@ font-family: Arial, Helvetica, sans-serif;
 
     #head > .menu > .nav > li
     {
-        text-align: center;
+        text-align: right;
+        margin-right: 15px;
     }
 
     /* #head .menu .nav li .subnav2
@@ -176,18 +170,18 @@ font-family: Arial, Helvetica, sans-serif;
         margin-left: 90px;
     } */
 
-    #head .menu .nav .subnav2 li
+    /* #head .menu .nav .subnav2 li
     {
         width: 100px;
         background-color: #FFFFFF;
-    }
+    } */
 
-    #head .menu .nav .subnav2 li a
+    /* #head .menu .nav .subnav2 li a
     {
         width: 100px;
         background-color: #FFFFFF;
         padding-right: 7px;
-    }
+    } */
 
     #head .icon-thugon
     {
@@ -207,7 +201,75 @@ font-family: Arial, Helvetica, sans-serif;
     #head .icon-thugon:hover
     {
         background-color: #C7C7C7;
-        display: inline-block;
+        display: block;
+    }
+}
+
+/* Mobile res phần thanh menu */
+@media (max-width: 740px) {
+    /* Menu Taskbar */
+    #head .menu .nav
+    {
+        display: none;
+        margin-left: 258px;
+        margin-top: 91px;
+        width: 200px;
+    }
+
+    #head .menu .nav
+    {
+        background-color: white;
+    }
+
+    #head > .menu > .nav > li
+    {
+        text-align: right;
+        margin-right: 15px;
+    }
+
+    /* #head .menu .nav li .subnav2
+    {
+        width: 120px;
+        box-shadow: 0px 7px 12px 5px #C7C7C7;;
+    } */
+
+    /* #head .menu .nav .subnav2
+    {
+        margin-left: 90px;
+    } */
+
+    /* #head .menu .nav .subnav2 li
+    {
+        width: 100px;
+        background-color: #FFFFFF;
+    } */
+
+    /* #head .menu .nav .subnav2 li a
+    {
+        width: 100px;
+        background-color: #FFFFFF;
+        padding-right: 7px;
+    } */
+
+    #head .icon-thugon
+    {
+        display: block;
+        margin-right: -690px;
+    }
+
+    #head .icon-thugon .icon
+    {
+        font-size: 40px;
+        margin-top: 15px;
+        margin-left: 5px;
+        padding: 10px;
+
+    }
+
+    #head .icon-thugon:hover
+    {
+        background-color: #C7C7C7;
+        display: block;
     }
 }
 
@@ -221,7 +283,7 @@ font-family: Arial, Helvetica, sans-serif;
     top: 120%;
     right: 30%;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .menu-form li{
@@ -315,6 +377,7 @@ font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 600px;
     /* padding-bottom: 56.25%; */
 }
 
@@ -334,7 +397,17 @@ font-family: Arial, Helvetica, sans-serif;
         width: 1150px;
         height: 600px;
     }
+}
 
+/* Mobile res phần video */
+@media (max-width: 740px) {
+    #content .video
+    {
+        display: flex;
+        justify-content: center;
+        width: 1150px;
+        height: 550px;
+    }
 }
 
 /* Icon */
@@ -361,11 +434,20 @@ font-family: Arial, Helvetica, sans-serif;
     }
 }
 
+/* Mobile res phần icon */
+@media (max-width: 740px) {
+    #content .icon
+    {
+        margin-left: 20px;
+        padding-top: 30px;
+    }
+}
+
 /* Khung giới thiệu */
 #content .text-containt
 {
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
@@ -462,11 +544,53 @@ font-family: Arial, Helvetica, sans-serif;
     }
 }
 
+/* Mobile res phần khung giới thiệu */
+@media (max-width: 740px) {
+    /* Khung giới thiệu */
+    #content .text-containt
+    {
+        background-color: white;
+        width: 800px;
+        height: 300px;
+        margin-top: -160px;
+        margin-left: 360px;
+    }
+
+    /* Chữ Welcome và hai thanh hr hai bên */
+    #content .text-containt .text-head
+    {
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        margin: 40px 0;
+    }
+
+    /* Text center trong khung giới thiệu */
+    #content .text-containt .text-center p
+    {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #content .text-containt .text-center .btn
+    {
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+        width: 120px;
+        height: 40px;
+        padding: 3px 12px 6px 12px;
+        margin-top: 20px;
+        border-color: none;
+        background: url('/img/Background.png') top center / cover no-repeat;
+    }
+}
+
 /* Kệ sách */
 #content .bookshelf-containt
 {
     margin-left: 145px;
-    margin-top: 800px;
+    margin-top: 670px;
 }
 
 #content .bookshelf-containt .text-noibat
@@ -500,6 +624,7 @@ font-family: Arial, Helvetica, sans-serif;
 {
     display: flex;
     width: 100%;
+    justify-content: center;
 }
 
 #content .bookshelf-containt .bookshelf-content
@@ -509,173 +634,251 @@ font-family: Arial, Helvetica, sans-serif;
     background: url('/img/backgroup_ke_sach.jpg') top center / cover no-repeat;
 }
 
-#content .bookshelf-containt .bookshelf-content .prev-btn,
-#content .bookshelf-containt .bookshelf-content .next-btn
-{
-    width: 15%;
-    text-align: center;
-    margin: 150px 0;
-}
-
-
-#content .bookshelf-containt .bookshelf-content #prev,
-#content .bookshelf-containt .bookshelf-content #next
-{
-    width: 60px;
-    height: 60px;
-}
-
-#content .bookshelf-containt .bookshelf-content #prev:hover,
-#content .bookshelf-containt .bookshelf-content #next:hover
-{
-    cursor: pointer;
-}
-
-#content .bookshelf-containt .bookshelf-content .book-center
-{
-    width: 70%;
-}
-
-#content > .bookshelf-containt > .bookshelf-content > .book-center > .book
+#content .bookshelf-content #myCarousel
 {
     width: 100%;
-    display: flex;
-    overflow: hidden;
 }
 
-/* #content .bookshelf-containt .bookshelf-content .book-center .book .book1 .book-content,
-#content .bookshelf-containt .bookshelf-content .book-center .book .book2 .book-content
+#content .bookshelf-content #myCarousel .carousel-inner .carousel-item img
 {
+    margin: 50px 40px;
     width: 200px;
     height: 250px;
-    margin: 0 30px;
-    margin-top: 35px;
-    transition: 2s;
+    transition: transform 0.3s ease;
+}
+
+#content .bookshelf-content #myCarousel .carousel-inner .carousel-item img:hover
+{
+    transform: scale(1.03);
+}
+
+#content .bookshelf-content #myCarousel .carousel-inner .giadosach
+{
+    margin-top: 95px;
+    margin-left: 166px;
+}
+
+/* #content .bookshelf-content #myCarousel .carousel-control-prev .carousel-control-prev-icon,
+#content .bookshelf-content #myCarousel .carousel-control-next .carousel-control-next-icon
+{
+    background-color: black;
+    height: 50px;
+    width: 50px;
 } */
 
-#content .bookshelf-containt .bookshelf-content .book-center .book .book-content,
-#content .bookshelf-containt .bookshelf-content .book-center .book .book-content
+#content .bookshelf-content #myCarousel .carousel-control-prev .nut-prev,
+#content .bookshelf-content #myCarousel .carousel-control-next .nut-next
 {
-    width: 200px;
-    height: 250px;
-    margin: 0 70px;
-    margin-top: 35px;
-    transition: 2s;
-}
-
-#content .bookshelf-containt .bookshelf-content .book-center .giadosach
-{
-    width: 100%;
-}
-
-#content .bookshelf-containt .bookshelf-content .book-center .giadosach .kesach
-{
-    margin-top: -200px;
-    margin-left: 10px;
+    height: 60px;
+    width: 60px;
+    color: black;
 }
 
 /* Tablet res phần icon*/
 @media (min-width: 740px) and (max-width: 1023px) {
-    /* Kệ sách */
     #content .bookshelf-containt
     {
-        margin-left: 145px;
-        margin-top: 680px;
-        width: 125%;
+        width: 1000px;
+        margin-left: 122px;
+        margin-top: 688px;
     }
 
-    #content .bookshelf-containt .text-noibat
+    #content .bookshelf-content #myCarousel .carousel-inner .carousel-item img
     {
-        display: flex;
-        background-color: white;
-        margin-top: 270px;
-        width: 90%;
-        height: 40px;
+        margin: 50px 20px;
+        width: 160px;
+        height: 220px;
     }
 
-    #content .bookshelf-containt .text-noibat hr
+    #content .bookshelf-content #myCarousel .carousel-inner .giadosach
     {
-        width: 5%;
-        height: 5px;
-        margin: 0 10px;
-        margin-top: 20px;
-        background-color: #C6C6C7;
+        margin-top: 120px;
+        margin-left: 114px;
     }
 
-    #content .bookshelf-containt .text-noibat p
+    #content .bookshelf-content #myCarousel .carousel-inner .giadosach .kesach
     {
-        line-height: 40px;
-        font-size: 20px;
-        font-style: italic;
-        font-weight: bolder;
-        text-transform: uppercase;
+        width: 670px;
+    }
+}
+
+/* Mobile res phần kệ sách */
+@media (max-width: 740px) {
+    #content .bookshelf-containt
+    {
+        width: 1000px;
+        margin-left: 122px;
+        margin-top: 688px;
     }
 
-    #content .bookshelf-content
+    #content .bookshelf-content #myCarousel .carousel-inner .carousel-item img
     {
-        display: flex;
-        width: 100%;
+        margin: 50px 20px;
+        width: 160px;
+        height: 220px;
     }
 
-    #content .bookshelf-containt .bookshelf-content
+    #content .bookshelf-content #myCarousel .carousel-inner .giadosach
     {
-        width: 90%;
-        height: 350px;
-        background: url('/img/backgroup_ke_sach.jpg') top center / cover no-repeat;
+        margin-top: 120px;
+        margin-left: 114px;
     }
 
-    #content .bookshelf-containt .bookshelf-content .prev-btn,
-    #content .bookshelf-containt .bookshelf-content .next-btn
+    #content .bookshelf-content #myCarousel .carousel-inner .giadosach .kesach
     {
-        width: 10%;
-        text-align: center;
-        margin: 150px 0;
+        width: 670px;
+    }
+}
+
+/* Footer */
+#footer
+{
+    display: flex;
+    width: 100%;
+    margin-top: 390px;
+    background-color: #EDE5E5;
+}
+
+/* Footer-left */
+#footer .ft-left
+{
+    width: 35%;
+    margin-left: 10px;
+}
+
+#footer .ft-left .logo-ft
+{
+    width: 100px;
+    margin-top: 10px;
+}
+
+#footer .ft-left .menu
+{
+    margin-top: 10px;
+}
+
+#footer .ft-left .menu a
+{
+    color: black;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+#footer .ft-left .menu a:first-child
+{
+    border-right: 2px solid black;
+}
+
+#footer .ft-left .menu a:nth-child(3)
+{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+#footer .ft-left .menu a:nth-child(5)
+{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+#footer .ft-left .menu a:hover
+{
+    color: white;
+}
+
+/* Footer center */
+#footer .footer-center
+{
+    width: 40%;
+    margin-top: 30px;
+}
+
+#footer .footer-center div
+{
+    display: flex;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#footer .footer-center div .icon-ft
+{
+    color: black;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 40px;
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#footer .footer-center div p
+{
+    line-height: 40px;
+    margin-left: 10px;
+    color: black;
+}
+
+/* Footer right */
+#footer .footer-right
+{
+    width: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .footer-right .about-ft p:first-child
+{
+    display: block;
+    color: #2b2727;
+    font-size: 29px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#footer .footer-right .about-ft p
+{
+    color: black;
+}
+
+#footer .footer-right .icon-footer .icon-ft
+{
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    margin-right: 20px;
+    color: black;
+}
+
+/* Tablet res phần Footer */
+@media (min-width: 740px) and (max-width: 1023px) {
+    /* Footer */
+    #footer
+    {
+        margin-top: 390px;
+        width: 1155px;
     }
 
-
-    #content .bookshelf-containt .bookshelf-content #prev,
-    #content .bookshelf-containt .bookshelf-content #next
+    /* Footer - Center */
+    #footer .footer-center
     {
-        width: 50px;
-        height: 50px;
+        margin-left: 30px;
+    }
+}
+
+/* Mobile res phần footer */
+@media (max-width: 740px) {
+    /* Footer */
+    #footer
+    {
+        margin-top: 390px;
+        width: 1155px;
     }
 
-    #content .bookshelf-containt .bookshelf-content #prev:hover,
-    #content .bookshelf-containt .bookshelf-content #next:hover
+    /* Footer - Center */
+    #footer .footer-center
     {
-        cursor: pointer;
-    }
-
-    #content .bookshelf-containt .bookshelf-content .book-center
-    {
-        width: 80%;
-    }
-
-    #content .bookshelf-containt .bookshelf-content .book-center .book
-    {
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-    }
-
-    #content .bookshelf-containt .bookshelf-content .book-center .book .book-content
-    {
-        width: 200px;
-        height: 250px;
-        margin: 0 35px;
-        margin-top: 35px;
-        transition: 2s;
-    }
-
-    #content .bookshelf-containt .bookshelf-content .book-center .giadosach
-    {
-        width: 100%;
-    }
-
-    #content .bookshelf-containt .bookshelf-content .book-center .giadosach .kesach
-    {
-        margin-top: -160px;
-        margin-left: -25px;
-        width: 730px;
+        margin-left: 30px;
     }
 }
