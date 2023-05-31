@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +26,7 @@
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Danh mục</a></li>
                     <li><a href="#">Sự kiện</a></li>
-                    <li><a href="#">Diễn đàn</a></li>
+                    <li><a href="./diendan.html">Diễn đàn</a></li>
                     <li><a href="#">Liên hệ</a></li>
                     <li>
                         <a href="#">Tài khoản</a>
@@ -98,40 +103,87 @@
                     <p>Sách nổi bật</p>
                 </div>
                 <div class="bookshelf-content">
-                    <div class="prev-btn">
-                        <ion-icon name="chevron-back-circle-outline" id="prev"></ion-icon>
-                    </div>
-                    <div class="book-center">
-                        <div class="book">
-                            <!-- <div class="book1">
-                                <img src="./img/sach1.jpg" alt="" class="book-content">
-                                <img src="./img/sach2.jpg" alt="" class="book-content">
-                                <img src="./img/sach3.jpg" alt="" class="book-content">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Slide -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <center>
+                                    <img src="./img/sach1.jpg" alt="Image 1">
+                                    <img src="./img/sach2.jpg" alt="Image 2">
+                                    <img src="./img/sach3.jpg" alt="Image 3">
+                                </center>
                             </div>
-                            <div class="book2">
-                                <img src="./img/sach4.jpg" alt="" class="book-content">
-                                <img src="./img/sach5.jpg" alt="" class="book-content">
-                            </div> -->
-
-                                <img src="./img/sach1.jpg" alt="" class="book-content" id="anh1">
-                                <img src="./img/sach2.jpg" alt="" class="book-content" id="anh2">
-                                <img src="./img/sach3.jpg" alt="" class="book-content" id="anh3">
-                                <img src="./img/sach4.jpg" alt="" class="book-content" id="anh4">
-                                <img src="./img/sach5.jpg" alt="" class="book-content" id="anh5">
+                            <div class="carousel-item">
+                                <center>
+                                    <img src="./img/sach4.jpg" alt="Image 4">
+                                    <img src="./img/sach5.jpg" alt="Image 5">
+                                    <img src="./img/sach3.jpg" alt="Image 6">
+                                </center>
+                            </div>
+                            <div class="giadosach">
+                                <img src="./img/book_bg-removebg-preview.png" alt="" class="kesach">
+                            </div>
                         </div>
-                        <div class="giadosach">
-                            <img src="./img/book_bg-removebg-preview.png" alt="" class="kesach">
-                        </div>
-                    </div>
-                    <div class="next-btn">
-                        <ion-icon name="chevron-forward-circle-outline" id="next"></ion-icon>
+                    
+                        <!-- Controls -->
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                            <ion-icon name="chevron-back-circle-outline" class="nut-prev"></ion-icon>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                            <ion-icon name="chevron-forward-circle-outline"  class="nut-next"></ion-icon>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="footer">
+            <div class="ft-left">
+                <img src="./img/Untitled-removebg-preview.png" alt="" class="logo-ft">
+                <p class="menu">
+                    <a href="">Trang chủ</a>
+                    <a href="">Danh mục</a>
+                    <a href="">Sự kiện</a>
+                    <a href="">Diễn đàn</a>
+                    <a href="">Liên hệ</a>
+                    <a href="">Tài khoản</a>
+                </p>
+                <p class="copyright">
+                    Copyright &copy; Best Web Design 2023    
+                </p>
+            </div>
 
+            <div class="footer-center">
+                <div>
+                    <ion-icon name="map-outline" class="icon-ft"></ion-icon>
+                    <p>Công Nghệ Thông Tin Việt-Hàn (VKU)</p>
+                </div>
+                <div>
+                    <ion-icon name="call-outline" class="icon-ft"></ion-icon>
+                    <p><strong>0774944182</strong></p>
+                </div>
+                <div>
+                    <ion-icon name="mail-outline" class="icon-ft"></ion-icon>
+                    <p><strong>Nghilc.22itb@vku.udn.vn</strong></p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="about-ft">
+                    <p>About the shop</p>
+                    <p><strong>Web giới thiệu sách</strong> được làm ra bởi Lâm Chính Nghi, Võ Thị Hương, Võ Văn Quang Hoang, Huỳnh Công An</p>
+                </div>
+
+                <div class="icon-footer">
+                    <a href=""><ion-icon name="logo-facebook" class="icon-ft"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-instagram" class="icon-ft"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-twitter" class="icon-ft"></ion-icon></a>
+                </div>
+            </div>
         </div>
     </div>
 
